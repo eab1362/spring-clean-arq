@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "ProyecTest"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+commons:
+  jms:
+    output-concurrency: 10
+    output-queue: "DEV.QUEUE.1"
+    producer-ttl: 0
+    reactive: true
+ibm:
+  mq:
+    channel: "DEV.APP.SVRCONN"
+    user: "app"
